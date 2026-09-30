@@ -6,7 +6,7 @@ import { ThemeToggle } from "@/components/home/theme-toggle";
 import { siteConfig } from "@/lib/home";
 import { cn } from "@/lib/utils";
 import { Menu, X, Github } from "lucide-react";
-import { AnimatePresence, motion, useScroll } from "motion/react";
+import { AnimatePresence, motion, useScroll, type Variants } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -41,7 +41,7 @@ const drawerVariants = {
     y: 100,
     transition: { duration: 0.1 },
   },
-};
+} satisfies Variants;
 
 const drawerMenuContainerVariants = {
   hidden: { opacity: 0 },
